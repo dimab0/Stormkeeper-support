@@ -1,0 +1,17 @@
+:root { --ocean: #060c12; --ink: #101e27; --ivory: #f5e7ca; --gold: #efcb8c; --copper: #d9854a; --amber: #f6a541; --fog: #82909b; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 50% -10%, #1a2a35 0%, var(--ocean) 60%) fixed; color: var(--ivory);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header.app { display: flex; align-items: center; gap: 14px; }
+header.app img { width: 56px; height: 56px; border-radius: 13px; }
+header.app a { color: var(--ivory); text-decoration: none; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; font-size: 20px; }
+nav { margin: 18px 0 28px; display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: var(--copper); text-decoration: none; text-transform: uppercase; letter-spacing: 0.16em; font-size: 13px; font-weight: 700; }
+h1 { font-size: 34px; letter-spacing: 0.08em; text-transform: uppercase; margin: 8px 0; text-shadow: 0 0 24px rgba(246,165,65,0.35); }
+h2 { color: var(--gold); font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 32px; }
+.lead { font-family: Georgia, serif; font-style: italic; font-size: 21px; color: rgba(245,231,202,0.8); }
+a { color: var(--amber); }
+.card { background: linear-gradient(var(--ink), var(--ocean)); border: 1px solid rgba(217,133,74,0.4); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.hero { width: 100%; border-radius: 18px; border: 1px solid rgba(217,133,74,0.35); margin: 12px 0 8px; }
+footer { margin-top: 48px; color: var(--fog); font-size: 13px; }
