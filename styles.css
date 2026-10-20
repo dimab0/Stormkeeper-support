@@ -1,17 +1,24 @@
-:root { --ocean: #060c12; --ink: #101e27; --ivory: #f5e7ca; --gold: #efcb8c; --copper: #d9854a; --amber: #f6a541; --fog: #82909b; }
+/* Stormkeeper Light: the storm rescue station's notice board. Storm black,
+   stamped-steel plates with cut corners, compressed capitals, rescue red. */
+:root { --storm: #0b0f12; --gun: #1c2328; --plate: #283137; --foam: #e9eef0; --steel: #8a979f; --sodium: #ffb547; --rescue: #e0362c; }
 * { box-sizing: border-box; }
-body { margin: 0; background: radial-gradient(ellipse at 50% -10%, #1a2a35 0%, var(--ocean) 60%) fixed; color: var(--ivory);
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
-main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-header.app { display: flex; align-items: center; gap: 14px; }
-header.app img { width: 56px; height: 56px; border-radius: 13px; }
-header.app a { color: var(--ivory); text-decoration: none; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; font-size: 20px; }
-nav { margin: 18px 0 28px; display: flex; gap: 18px; flex-wrap: wrap; }
-nav a { color: var(--copper); text-decoration: none; text-transform: uppercase; letter-spacing: 0.16em; font-size: 13px; font-weight: 700; }
-h1 { font-size: 34px; letter-spacing: 0.08em; text-transform: uppercase; margin: 8px 0; text-shadow: 0 0 24px rgba(246,165,65,0.35); }
-h2 { color: var(--gold); font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 32px; }
-.lead { font-family: Georgia, serif; font-style: italic; font-size: 21px; color: rgba(245,231,202,0.8); }
-a { color: var(--amber); }
-.card { background: linear-gradient(var(--ink), var(--ocean)); border: 1px solid rgba(217,133,74,0.4); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
-.hero { width: 100%; border-radius: 18px; border: 1px solid rgba(217,133,74,0.35); margin: 12px 0 8px; }
-footer { margin-top: 48px; color: var(--fog); font-size: 13px; }
+body { margin: 0; background: var(--storm); color: var(--foam); font: 17px/1.55 -apple-system, "Helvetica Neue", Arial, sans-serif; font-stretch: condensed; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 22px 20px 50px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 2px solid var(--rescue); padding-bottom: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--foam); text-decoration: none; }
+.brand img { width: 44px; height: 44px; clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 20%); }
+.brand b { font-weight: 900; font-size: 24px; letter-spacing: 0.02em; text-transform: uppercase; font-stretch: ultra-condensed; }
+nav a { color: var(--steel); text-decoration: none; font-weight: 800; text-transform: uppercase; margin-left: 16px; font-size: 15px; }
+nav a.on, nav a:hover { color: var(--rescue); }
+.tag { display: inline-block; background: var(--rescue); color: #fff; font-weight: 900; text-transform: uppercase; padding: 3px 12px; font-size: 13px; clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px); margin-top: 26px; }
+h1 { font-size: 46px; line-height: 1.02; margin: 10px 0 10px; font-weight: 900; text-transform: uppercase; font-stretch: ultra-condensed; }
+h2 { font-size: 22px; font-weight: 900; text-transform: uppercase; margin: 0 0 6px; color: var(--sodium); }
+p { color: #c9d1d5; margin: 0 0 10px; }
+.hero { width: 100%; margin: 18px 0 8px; clip-path: polygon(24px 0, calc(100% - 24px) 0, 100% 24px, 100% calc(100% - 24px), calc(100% - 24px) 100%, 24px 100%, 0 calc(100% - 24px), 0 24px); border-left: 5px solid var(--rescue); }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+.plate { background: var(--gun); padding: 16px 18px; border-left: 4px solid var(--sodium); clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px); }
+.plate.red { border-left-color: var(--rescue); }
+a { color: var(--sodium); }
+ol li, ul li { color: #c9d1d5; margin-bottom: 6px; }
+footer { margin-top: 34px; color: var(--steel); font-size: 14px; border-top: 1px solid var(--plate); padding-top: 12px; }
+@media (max-width: 680px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 36px; } nav a { margin: 0 14px 0 0; } }
